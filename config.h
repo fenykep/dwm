@@ -42,7 +42,7 @@ static const Rule rules[] = {
 /* layout(s) */
 static const float mfact     = 0.60; /* factor of master area size [0.05..0.95] */
 static const int nmaster     = 1;    /* number of clients in master area */
-static const int resizehints = 1;    /* 1 means respect size hints in tiled resizals */
+static const int resizehints = 0;    /* 1 means respect size hints in tiled resizals */
 static const int lockfullscreen = 1; /* 1 will force focus on the fullscreen window */
 
 
@@ -68,10 +68,10 @@ static const Layout layouts[] = {
 #define SHCMD(cmd) { .v = (const char*[]){ "/bin/sh", "-c", cmd, NULL } }
 
 /* commands */
-static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
-static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_darkblu, "-nf", col_gray4, "-sb", col_orange, "-sf", col_darkblu, NULL };
+static char dmenumon[2] = "0"; 
+static const char *dmenucmd[] = { "dmenu_run", "-fn", dmenufont, "-nb", col_darkblu, "-nf", col_gray4, "-sb", col_orange, "-sf", col_darkblu, NULL };
 static const char *termcmd[]  = { "st", NULL };
-static const char *browser[]  = { "vivaldi-stable", NULL };
+static const char *browser[]  = { "firefox", NULL };
 static const char *dolphin[]  = { "dolphin", NULL };
 
 static const Key keys[] = {
